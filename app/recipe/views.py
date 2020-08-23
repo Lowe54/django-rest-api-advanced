@@ -17,4 +17,3 @@ class TagViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
         """Return objects for the current authenticated user"""
 
         return self.queryset.filter(user=self.request.user).order_by('-name')
-    
