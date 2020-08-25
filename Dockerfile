@@ -22,7 +22,7 @@ RUN mkdir -p /vol/web/static
 # Add the user, -D means applications only, username
 RUN adduser -D user
 RUN chown -R user:user /vol/
-RUN chown -R 755 /vol/web
+RUN chmod -R 755 /vol/web
 # Set the user to be used
 USER user
 
